@@ -101,8 +101,8 @@ int main(int argc, char *argv[]) {
 		CUDA_RUN(cudaGetLastError());
 		CUDA_RUN(cudaDeviceSynchronize());
 		combinations_kernel << < grid_dim, block_dim >> > (dev_choices, dev_selected_K, dev_shortestPath, dev_graphWeights, dev_cost, dev_size);
-		CUDA_RUN(cudaDeviceSynchronize());
 		CUDA_RUN(cudaGetLastError());
+		CUDA_RUN(cudaDeviceSynchronize());
 		percentage = (100. / (float) num_kernels * (float)(i + 1));
 		printf("\rProgress : ");
 		for (int j = 0; j < 10; j++) {
