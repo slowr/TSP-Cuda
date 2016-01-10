@@ -1,4 +1,4 @@
-#include "Header.h"
+#include "header.h"
 
 #define MAX_THREADS 1024
 #define MAX_BLOCKS 30
