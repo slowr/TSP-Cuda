@@ -119,7 +119,7 @@ int main(int argc, char *argv[]) {
 	CUDA_RUN(cudaMemcpy(cost, dev_cost, num_blocks * size32, cudaMemcpyDeviceToHost));
 
 	printf("\nTime passed:  %3.1f ms \n", time_passed);
-	//print_Graph(graphWeights, size);
+	print_Graph(graphWeights, size);
 
 	{
 		int32_t min = cost[0];
